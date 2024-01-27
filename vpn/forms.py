@@ -5,8 +5,8 @@ from vpn.models import Site
 class SiteForm(forms.ModelForm):
     class Meta:
         model = Site
-        fields = ["title", "url"]
+        fields = ["name", "url"]
         widgets = {
-            "title": forms.TextInput(attrs={"class": "form-control"},),
+            "name": forms.TextInput(attrs={"class": "form-control"},),
             "url": forms.URLInput(attrs={"class": "form-control"}),
         }

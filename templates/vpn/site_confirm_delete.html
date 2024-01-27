@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5" style="text-align: center">
+        <div style="text-align: center">
+            <svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" fill="#000000" style="width: 125px; height: 125px">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g fill="none" fill-rule="evenodd" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)">
+                        <circle cx="8.5" cy="8.5" r="8"></circle>
+                        <g transform="matrix(0 1 -1 0 17 0)">
+                            <path d="m5.5 11.5 6-6"></path>
+                            <path d="m5.5 5.5 6 6"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <h1 class="display-4">Are you sure?</h1>
+    </div>
+
+    <div class="container mt-5" style="max-width: 500px">
+        <form novalidate method="post">
+            {% csrf_token %}
+            <div class="mb-4" style="text-align: center">
+                <button type="submit" class="btn btn-dark" style="width: 100%">Submit</button>
+            </div>
+        </form>
+        {% include 'includes/cancel_button.html' %}
+    </div>
+{% endblock %}
