@@ -14,8 +14,7 @@ class Site(models.Model):
     )
 
     class Meta:
-        unique_together = ("created_by", "url")
-        ordering = ["-created_at"]
+        ordering = ("-created_at", )
 
     @property
     def get_short_url(self):
