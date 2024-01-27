@@ -1,6 +1,6 @@
     <header class="navbar navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href={% url "vpn:site-list" %}>VPN Service</a>
+            <a class="navbar-brand" href="#">VPN Service</a>
             <div class="d-flex">
 
                 {% if user.is_authenticated %}
@@ -10,7 +10,7 @@
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href={% url "user:me" %}>Profile</a>
-                      <a class="dropdown-item" href={% url "vpn:site-list" %}>Dashboard</a>
+                      <a class="dropdown-item" href="#"}>Dashboard</a>
                   </div>
                 </div>
                 <form method="post" action="{% url 'logout' %}">
